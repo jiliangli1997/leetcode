@@ -30,7 +30,9 @@ ListNode cur = dummy;
 
 - reverse linkedList
 three Node : cur, pre, next
-cur = head, current node
-pre = null, as the pre node of each new add node of the return list
-next = cur.next, record the next node of the cur node
-cur pointed to next -> point to pre
+```
+//cur = head, current node
+//pre = null, as the pre node of each new add node of the return list
+//next = cur.next, record the next node of the cur node
+//cur pointed to next -> point to pre
+```
