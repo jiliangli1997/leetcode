@@ -36,3 +36,8 @@ three Node : cur, pre, next
 //next = cur.next, record the next node of the cur node
 //cur pointed to next -> point to pre
 ```
+
+*05/02/2021*
+
+- two pointer : must be in a sorted list or array
+- kSum: check duplicate
