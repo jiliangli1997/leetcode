@@ -39,5 +39,42 @@ three Node : cur, pre, next
 
 *05/02/2021*
 
-- two pointer : must be in a sorted list or array
+- two pointer (different direction) : must be in a sorted list or array
 - kSum: check duplicate
+
+*05/03/2021*
+- two pointer (same direction) ; in place change
+```
+//1. pointer 'k' to reserve a position for next valid item (where to start k?)
+//2. pointer 'i' to scan each item in an input array (where to start i?)
+//3. if nums[i] meet the requirement of that reserved position, let nums[k] = nums[i] (what is the requirement?)
+```
+- array initialize
+```
+return new int[]{1, 2};
+```
+
+*05/12/2021*
+- leetcode 27
+```
+ public int removeElement(int[] nums, int val) {
+        int k = 0;   //reserve place for correct answer
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {  //it is the correct answer
+                if (k != i) { //need to swap
+                    nums[k] = nums[i];
+                }
+                k++; // whether it need the swap or not, we need increment the reserve index
+            }
+            
+        }
+        return k;
+    }
+```
+- when doing check duplicate, skip the first one and then loop others by 
+```
+num[i] != num[i - 1];
+```
+
+- two pointer 时找特定元素的距离上问题 ： 少的元素用不同index；多的话用hashmap存，之后再扫
+（243， 763）
