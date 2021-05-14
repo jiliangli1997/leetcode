@@ -78,3 +78,19 @@ num[i] != num[i - 1];
 
 - two pointer 时找特定元素的距离上问题 ： 少的元素用不同index；多的话用hashmap存，之后再扫
 （243， 763）
+
+*05/13/2021*
+- string -> charArray->string
+```
+String s = "test";
+char[] c = s.toCharArray();
+String s1 = new String(c);
+```
+- leetcode 819 string 正则表达式 整理字符串
+```
+s.replaceAll("\\pP", " "); //清除标点,用" "代替
+s.toLowerCase(); //变小写
+s.split("\\s+");//基于空格分割成String Array
+```
+
+- DO need to initialize StringBuilder array one by one after the array Initialization
